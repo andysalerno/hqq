@@ -4,8 +4,8 @@ import torch, copy
 from torch import uint8, int32, bfloat16, nn, Tensor
 import torch.nn.functional as F
 
-# from .utils import cleanup
-# from .quantize import Quantizer, HQQLinear
+from .utils import cleanup
+from .quantize import Quantizer, HQQLinear
 
 #Adapted from: https://github.com/pytorch-labs/gpt-fast/blob/main/quantize.py
 #WARNING: These scales/zeros are in HQQ format: W_r = ((W_q - zeros)*scales).reshape(shape)
